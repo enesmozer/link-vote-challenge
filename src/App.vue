@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss">
- @import './assets/styles/app.scss';
+@import "./assets/styles/app.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,6 @@
 }
 
 #nav {
- 
   padding: 30px;
 
   a {
