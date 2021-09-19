@@ -2,6 +2,6 @@
 export default {};
 </script>
 <template>
-  <div>List Page</div>
+  <div class="link-form">List Page</div>
 </template>
 <style lang="scss" scoped></style>
