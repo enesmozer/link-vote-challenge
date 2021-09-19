@@ -9,30 +9,17 @@ export default {
 <template>
   <div id="app">
     <Header logo="src/assets/logo.png"></Header>
-    <router-view />
+    <router-view class="page" />
   </div>
 </template>
 
 <style lang="scss">
 @import "./assets/styles/app.scss";
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.page {
+  @apply flex;
+  @apply items-center;
+  @apply w-screen;
+  @apply flex-col;
+  height: calc(theme("height.screen") - theme("spacing.20"));
 }
 </style>
