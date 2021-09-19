@@ -5,15 +5,27 @@
       <div class="submit-link-text">SUBMIT A LINK</div>
     </router-link>
     <div class="divider"></div>
+    <select class="sorting">
+      <option value="" disabled selected hidden>Order By</option>
+      <option value="volvo">Most Voted ( Z -> A)</option>
+      <option value="saab">Less Voted ( A -> Z)</option>
+    </select>
+    <LinkCard
+      point="4"
+      name="Tailwind"
+      url="https://v1.tailwindcss.com/"
+    ></LinkCard>
   </div>
 </template>
 
 <script>
 import PlusIcon from "@/assets/plus.svg";
+import LinkCard from "@/components/LinkCard.vue";
 export default {
   name: "Home",
   components: {
     PlusIcon,
+    LinkCard,
   },
 };
 </script>
@@ -54,6 +66,16 @@ export default {
     @apply h-1;
     @apply bg-gray-400;
     @apply mt-3;
+  }
+  .sorting {
+    @apply border-2;
+    @apply border-solid;
+    @apply border-gray-400;
+    @apply rounded;
+    @apply mt-4;
+    @apply transform;
+    @apply -translate-x-1/2;
+    @apply -mr-8;
   }
 }
 </style>
