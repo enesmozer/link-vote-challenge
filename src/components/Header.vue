@@ -25,12 +25,11 @@ export default {
 <style scoped lang="scss">
 .header {
   @apply w-11/12;
-  @apply h-28;
+  @apply h-20;
   @apply relative;
   @apply flex;
   @apply flex-col;
-  @apply justify-center;
-  @apply absolute;
+  @apply justify-end;
   @apply left-1/2;
   @apply transform;
   @apply -translate-x-1/2;
