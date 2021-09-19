@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <router-link to="/list" class="submit-link">
+    <router-link to="/add" class="submit-link">
       <div class="submit-link-icon"><PlusIcon class="icon" /></div>
       <div class="submit-link-text">SUBMIT A LINK</div>
     </router-link>
