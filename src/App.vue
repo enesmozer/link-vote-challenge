@@ -9,6 +9,7 @@ export default {
 <template>
   <div id="app">
     <notifications group="addLink" position="top center" />
+    <vue-confirm-dialog></vue-confirm-dialog>
     <Header logo="src/assets/logo.png"></Header>
     <router-view class="page" />
   </div>

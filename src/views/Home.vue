@@ -17,6 +17,24 @@ export default {
     };
   },
   methods: {
+    handleDelete(item) {
+      this.$confirm({
+        message: `Are you sure?`,
+        button: {
+          no: "No",
+          yes: "Yes",
+        },
+        /**
+         * Callback Function
+         * @param {Boolean} confirm
+         */
+        callback: (confirm) => {
+          if (confirm) {
+            this.deleteLink(item);
+          }
+        },
+      });
+    },
     deleteLink(item) {
       const links = JSON.parse(localStorage.getItem("links"));
       if (links.some((link) => link.id === item.id)) {
@@ -96,7 +114,7 @@ export default {
         :point="link.point"
         @upVote="vote(link.id, true)"
         @downVote="vote(link.id, false)"
-        @delete="deleteLink(link)"
+        @delete="handleDelete(link)"
       ></LinkCard>
     </div>
     <jw-pagination
