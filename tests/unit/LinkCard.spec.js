@@ -25,7 +25,7 @@ describe("LinkCard.vue", () => {
     vm.$mount(container);
     spy = sinon.spy(vm, "$emit");
   });
-  it("should link links", () => {
+  it("should list links", () => {
     expect(vm.name).contains(name);
     expect(vm.url).contains(url);
     expect(vm.point).equal(point);
