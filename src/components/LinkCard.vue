@@ -23,7 +23,7 @@ export default {
       <DeleteIcon class="link-card-delete" @click="$emit('delete')" />
       <div class="link-card-info">
         <div class="link-card-info-name">{{ name }}</div>
-        <div class="link-card-info-url">({{ url }})</div>
+        <div class="link-card-info-url">{{ url }}</div>
         <div class="link-card-info-vote">
           <div class="vote" @click="$emit('upVote')">
             <Arrow class="vote-icon" />Up Vote

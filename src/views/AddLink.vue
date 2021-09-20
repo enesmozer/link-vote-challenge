@@ -34,7 +34,7 @@ export default {
         const newLink = {
           id: Math.random().toString(36).substring(2),
           name: this.name,
-          url: this.url,
+          url: `(${this.url})`,
           point: 0,
           updatedAt: Date.now(),
         };
