@@ -66,10 +66,6 @@ export default {
       this.links = links;
       this.sort(this.sortType);
     },
-    onChangePage(pageOfItems) {
-      this.pagedLinks =
-        pageOfItems.length >= 10 ? pageOfItems.slice(0, 5) : pageOfItems;
-    },
     sort(type) {
       if (type === "most") {
         this.links.sort((a, b) => {
@@ -89,6 +85,10 @@ export default {
       localStorage.removeItem("links");
       localStorage.setItem("links", JSON.stringify(this.links));
     },
+    onChangePage(pageOfItems) {
+      this.pagedLinks =
+        pageOfItems.length >= 10 ? pageOfItems.slice(0, 5) : pageOfItems;
+    },
   },
   created() {
     this.links = JSON.parse(localStorage.getItem("links"));
@@ -104,8 +104,8 @@ export default {
     <div class="divider"></div>
     <select class="sorting" @change="sort(sortType)" v-model="sortType">
       <option value="" disabled selected hidden>Order By</option>
-      <option value="most">Most Voted ( Z -> A)</option>
-      <option value="less">Less Voted ( A -> Z)</option>
+      <option value="most">Most Voted</option>
+      <option value="less">Less Voted</option>
     </select>
     <div class="card" v-for="link in pagedLinks" :key="link.id">
       <LinkCard

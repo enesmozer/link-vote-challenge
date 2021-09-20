@@ -20,17 +20,19 @@ export default {
         <div class="point">{{ point }}</div>
         <div class="point-text">POINTS</div>
       </div>
-      <DeleteIcon class="link-card-delete" @click="$emit('delete')" />
+      <button class="link-card-delete" @click="$emit('delete')">
+        <DeleteIcon />
+      </button>
       <div class="link-card-info">
         <div class="link-card-info-name">{{ name }}</div>
         <div class="link-card-info-url">{{ url }}</div>
         <div class="link-card-info-vote">
-          <div class="vote" @click="$emit('upVote')">
+          <button class="vote up" @click="$emit('upVote')">
             <Arrow class="vote-icon" />Up Vote
-          </div>
-          <div class="vote" @click="$emit('downVote')">
+          </button>
+          <button class="vote down" @click="$emit('downVote')">
             <Arrow class="vote-icon down" />Down Vote
-          </div>
+          </button>
         </div>
       </div>
     </div>
