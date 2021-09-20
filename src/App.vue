@@ -8,6 +8,7 @@ export default {
 </script>
 <template>
   <div id="app">
+    <notifications group="addLink" position="top center" />
     <Header logo="src/assets/logo.png"></Header>
     <router-view class="page" />
   </div>
