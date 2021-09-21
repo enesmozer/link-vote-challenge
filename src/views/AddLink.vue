@@ -118,6 +118,8 @@ export default {
     .left-arrow {
       @apply transform;
       @apply -rotate-90;
+      @apply w-6;
+      @apply h-6;
     }
   }
   &-title {
